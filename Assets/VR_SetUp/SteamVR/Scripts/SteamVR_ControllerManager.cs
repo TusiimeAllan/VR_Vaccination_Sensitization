@@ -4,6 +4,7 @@
 //
 //=============================================================================
 
+using System.Collections;
 using UnityEngine;
 using Valve.VR;
 
@@ -30,7 +31,7 @@ public class SteamVR_ControllerManager : MonoBehaviour
 		objects[index] = o;
 	}
 
-	// This needs to be called if you update left, right or objects at runtime (e.g. when dyanmically spawned).
+	// This needs to be called if you update left, right or objects at runtime (e.g. when dynamically spawned).
 	public void UpdateTargets()
 	{
 		// Add left and right entries to the head of the list so we only have to operate on the list itself.
@@ -55,7 +56,7 @@ public class SteamVR_ControllerManager : MonoBehaviour
 		UpdateTargets();
 	}
 
-	SteamVR_ControllerManager2()
+	SteamVR_ControllerManager()
 	{
 		inputFocusAction = SteamVR_Events.InputFocusAction(OnInputFocus);
 		deviceConnectedAction = SteamVR_Events.DeviceConnectedAction(OnDeviceConnected);
@@ -63,26 +64,33 @@ public class SteamVR_ControllerManager : MonoBehaviour
 	}
 
 	void OnEnable()
-	{
-		for (int i = 0; i < objects.Length; i++)
-		{
-			var obj = objects[i];
-			if (obj != null)
-				obj.SetActive(false);
-
-			indices[i] = OpenVR.k_unTrackedDeviceIndexInvalid;
-		}
-
-		Refresh();
-
-		for (int i = 0; i < SteamVR.connected.Length; i++)
-			if (SteamVR.connected[i])
-				OnDeviceConnected(i, true);
-
-		inputFocusAction.enabled = true;
-		deviceConnectedAction.enabled = true;
-		trackedDeviceRoleChangedAction.enabled = true;
-	}
+    {
+        StartCoroutine (OnEnableRoutine());
+    }
+ 
+    IEnumerator OnEnableRoutine()//ADD THIS COROUTINE FOR LEGACY BINDINGS WORKAROUND.
+    {
+        yield return new WaitForSeconds (0.5f);//THIS PAUSE MUST BE ADDED OR ELSE LEGACY BINDINGS MIGHT INTERFERE WITH CONTROLLERS GETTING INITIALIZED.
+ 
+        for (int i = 0; i < objects.Length; i++)
+        {
+            var obj = objects[i];
+            if (obj != null)
+                obj.SetActive(false);
+ 
+            indices[i] = OpenVR.k_unTrackedDeviceIndexInvalid;
+        }
+ 
+        Refresh();
+ 
+        for (int i = 0; i < SteamVR.connected.Length; i++)
+            if (SteamVR.connected[i])
+                OnDeviceConnected(i, true);
+ 
+        inputFocusAction.enabled = true;
+        deviceConnectedAction.enabled = true;
+        trackedDeviceRoleChangedAction.enabled = true;
+    }
 
 	void OnDisable()
 	{
