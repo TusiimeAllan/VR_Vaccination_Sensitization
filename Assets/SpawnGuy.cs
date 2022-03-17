@@ -8,12 +8,23 @@ public class SpawnGuy : MonoBehaviour
     [SerializeField] private int NumberOfGuys;
     
     // Update is called once per frame
-    void Update()
+    void Start()
+    {
+        StartCoroutine(Bring());
+        
+    }
+
+    IEnumerator Bring()  //  <-  its a standalone method
     {
         for(int i=0; i < NumberOfGuys; i++)
         {
             Debug.Log("Number: " + i);
-            // Instantiate(WhatToInstantiate, transform.position, transform.rotation);
+            // yield return new WaitForSeconds(4f);
+            Instantiate(WhatToInstantiate, transform.position, transform.rotation);
+            yield return new WaitForSeconds(2f);
+            
+                        
         }
+        
     }
 }
