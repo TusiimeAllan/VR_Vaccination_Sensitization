@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Inside_Scene.unity
+    guid: dc3101a3652b3ba48b6b6d9f3e1f282e
+  - enabled: 1
+    path: Assets/Scenes/Introduction Room.unity
+    guid: b52909bd6a228424fa5dc0552242517c
+  - enabled: 1
+    path: Assets/Scenes/Kampala_Street.unity
+    guid: 2f7676658cf5bd04f8278d2adec41448
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a4ef86b523456364eb6b403ab7cbc762,
       type: 2}

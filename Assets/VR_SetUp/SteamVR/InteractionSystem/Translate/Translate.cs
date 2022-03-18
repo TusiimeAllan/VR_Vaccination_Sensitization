@@ -35,6 +35,11 @@ namespace Valve.VR.InteractionSystem
 
 		private bool visible = false;
 
+        [Header( "Camera" )]
+        public Transform cameraTransform;
+        public Vector3 moveDirection;
+        public float moveSpeed = 0.05f;
+
         void Start()
         {
 
@@ -59,20 +64,27 @@ namespace Valve.VR.InteractionSystem
                     (player.leftHand.currentAttachedObject != null);
 
             bool rightHandPressed = TranslatePlayer.GetState(SteamVR_Input_Sources.RightHand) && rightHandValid;
-            bool leftHandPressed = TranslatePlayer.GetStateDown(SteamVR_Input_Sources.LeftHand) && leftHandValid;
+            bool leftHandPressed = TranslatePlayer.GetState(SteamVR_Input_Sources.LeftHand) && leftHandValid;
 
             bool rightHandReleased = TranslatePlayer.GetStateUp(SteamVR_Input_Sources.RightHand) && rightHandValid;
             bool leftHandReleased = TranslatePlayer.GetStateUp(SteamVR_Input_Sources.LeftHand) && leftHandValid;
 
+            Vector3 lookDirection = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z);
+            moveDirection = lookDirection * moveSpeed;
+
+            
+
             
                 if(leftHandPressed)
                 {
+                    ReversePlayer();
                     Debug.Log("LeftHand Button Pressed");
                 }
 
                 if(rightHandPressed)
                 {
-                    CalculateMovement();
+                    // CalculateMovement();
+                    MovePlayer();
                     Debug.Log("RightHand Button Pressed");
                 }
 
@@ -88,39 +100,14 @@ namespace Valve.VR.InteractionSystem
                 }
 		}
 
-        
-        private void CalculateMovement()
+        private void MovePlayer()
         {
-            //Figure Out Movement Orientation
-            Vector3 orientationEuler = new Vector3(0, transform.eulerAngles.y, 0);
-            Quaternion orientation = Quaternion.Euler(orientationEuler);
-            Vector3 movement = Vector3.zero;
-
-            // Add then Clamp
-            m_Speed += move * m_Sensitivity;
-            m_Speed = Mathf.Clamp(m_Speed, -m_MaxSpeed, m_MaxSpeed);
-
-            //Orientation
-            movement += orientation * (m_Speed * Vector3.forward) * Time.deltaTime;
-
-            // Apply
-            m_CharacterController.Move(movement);
-
+            transform.localPosition += moveDirection;
         }
 
-        
-
-        private void Awake()
+        private void ReversePlayer()
         {
-            m_CharacterController = GetComponent<CharacterController>();
-        }
-
-        public void TestingGrab()
-        {
-            if(grabGripAction.GetStateDown(handType))
-            {
-                Debug.Log("They have Pressed me!");
-            }
+            transform.localPosition -= moveDirection;
         }
         
     }
