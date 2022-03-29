@@ -7,7 +7,9 @@ namespace Valve.VR.InteractionSystem.Sample
 {
 public class SceneTransition : MonoBehaviour
 {
-    public string SceneToLoad;
+    public string levelName;
+    public string previousLevel;
+
     public HoverButton hoverButton;
 
     // Start is called before the first frame update
@@ -18,14 +20,23 @@ public class SceneTransition : MonoBehaviour
 
     private void OnButtonDown(Hand hand)
     {
-        StartCoroutine(ChangeScene());
+        StartCoroutine(LoadLevelAsync());
     }
 
-   private IEnumerator ChangeScene()
+    private IEnumerator LoadLevelAsync()
     {
-        yield return new WaitForSeconds(1);
+        var progress = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive);
 
-        SceneManager.LoadScene(SceneToLoad);
-    }
+        while (!progress.isDone)
+        {
+            yield return null;
+        }
+
+        Debug.Log("Next Level Loaded");
+        Debug.Log("Previous Level Removed");
+
+        yield return new WaitForSeconds(2f);
+        SceneManager.UnloadSceneAsync(previousLevel);
+    } 
 }
 }

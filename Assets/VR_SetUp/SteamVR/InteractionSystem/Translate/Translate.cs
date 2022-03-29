@@ -15,6 +15,8 @@ namespace Valve.VR.InteractionSystem
     {
         public SteamVR_Action_Boolean TranslatePlayer = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("Teleport");
 
+        public SteamVR_Action_Boolean BringGun = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("GrabPinch");
+
         public float m_Sensitivity = 0.1f;
         public float m_MaxSpeed = 1.0f;
 
@@ -72,6 +74,8 @@ namespace Valve.VR.InteractionSystem
             Vector3 lookDirection = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z);
             moveDirection = lookDirection * moveSpeed;
 
+            bool gunOn = grabGripAction.GetStateDown(SteamVR_Input_Sources.RightHand);
+
             
 
             
@@ -86,6 +90,13 @@ namespace Valve.VR.InteractionSystem
                     // CalculateMovement();
                     MovePlayer();
                     Debug.Log("RightHand Button Pressed");
+                }
+
+                if(gunOn)
+                {
+                    // CalculateMovement();
+                    // MovePlayer();
+                    Debug.Log("Gun Requested");
                 }
 
             

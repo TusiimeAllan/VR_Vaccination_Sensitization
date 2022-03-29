@@ -21784,6 +21784,7 @@ GameObject:
   - component: {fileID: 1477037013}
   - component: {fileID: 1477037011}
   - component: {fileID: 1477037012}
+  - component: {fileID: 1477037015}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -21839,7 +21840,7 @@ BoxCollider:
   m_GameObject: {fileID: 1477037010}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 10, y: 0.1, z: 10.000001}
   m_Center: {x: 0, y: -0.05, z: 0}
@@ -21865,6 +21866,20 @@ Transform:
   m_Father: {fileID: 1856428177}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1477037015
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477037010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1480377450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31408,6 +31423,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8547597, guid: b58a6438b7f8cf1408f4ca6f3af671bb, type: 3}
+      propertyPath: BringGun.actionPath
+      value: /actions/default/in/GrabPinch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8547600, guid: b58a6438b7f8cf1408f4ca6f3af671bb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5407984097327460924, guid: b58a6438b7f8cf1408f4ca6f3af671bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31416,7 +31439,7 @@ PrefabInstance:
     - target: {fileID: 5407984097327460924, guid: b58a6438b7f8cf1408f4ca6f3af671bb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5407984097327460924, guid: b58a6438b7f8cf1408f4ca6f3af671bb,
         type: 3}
