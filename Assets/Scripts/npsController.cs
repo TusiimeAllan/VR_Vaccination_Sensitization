@@ -36,6 +36,10 @@ public class npsController : MonoBehaviour{
             }else{
                 index = 0;
             }
+
+            if(index == PathPoints.Length){
+                index = 0;
+            }
         }
 
 
