@@ -9,6 +9,9 @@ public class SpawnThem : MonoBehaviour
 
     public bool spawn = false;
 
+    public int NumberOfObjectsToSpawn;
+    private int counter = 0;
+
     void Start()
     {
         SpawnRandomPerson();
@@ -29,15 +32,21 @@ public class SpawnThem : MonoBehaviour
 
     IEnumerator SpawnAfterTime()
     {
-        yield return new WaitForSeconds(2);
-        produce();
-        produce();
-        spawn = true;
+        if(counter < NumberOfObjectsToSpawn){
+            yield return new WaitForSeconds(2);
+            produce();
+            produce();
+            spawn = true;
+        }else{
+            spawn = false;
+        }
+        
     }
 
     public void produce()
     {
         GameObject person = Instantiate(characters[Random.Range(0, characters.Length)], this.transform) as GameObject;
         person.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position;
+        counter++;
     }
 }

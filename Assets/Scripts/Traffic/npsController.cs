@@ -15,6 +15,7 @@ public class npsController : MonoBehaviour{
     public int index = 0;
 
     void Start(){
+        
         agent = GetComponent<NavMeshAgent>();
 
         PathPoints = new Transform[PATH.transform.childCount];
@@ -25,6 +26,15 @@ public class npsController : MonoBehaviour{
 
     void Update(){
         roam();
+
+        //This is to fix the issue of the agents from floating after being spawned
+        if (transform.hasChanged)
+        {
+            transform.hasChanged = false;
+        }else{
+            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            gameObject.GetComponent<NavMeshAgent>().enabled = true;
+        }
     }
 
     void roam(){
