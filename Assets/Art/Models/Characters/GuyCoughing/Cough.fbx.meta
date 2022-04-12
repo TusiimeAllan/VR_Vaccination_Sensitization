@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 1490089690760354301
-    second: IdleGuy
+    second: Coughing
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,10 +35,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: IdleGuy
+      name: Coughing
       takeName: Coughing
       internalID: 0
-      firstFrame: 66
+      firstFrame: 0
       lastFrame: 150
       wrapMode: 0
       orientationOffsetY: 0
@@ -46,7 +46,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
