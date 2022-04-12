@@ -927,6 +927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8899473070865313998}
   - component: {fileID: 4835497057086817079}
+  - component: {fileID: 5099370363058292432}
   m_Layer: 0
   m_Name: Bottoms
   m_TagString: Untagged
@@ -1013,6 +1014,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.093573734, y: -0.8954589, z: 0.35363147}
     m_Extent: {x: 0.55800337, y: 1.1740675, z: 0.77076244}
   m_DirtyAABB: 0
+--- !u!64 &5099370363058292432
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3787022662393957500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &3868992729998104362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,6 +1581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444087503987347286}
   - component: {fileID: 5831444576917191558}
+  - component: {fileID: 1113218149080817990}
   m_Layer: 0
   m_Name: Tops
   m_TagString: Untagged
@@ -1667,6 +1683,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.02387774, y: 0.41160458, z: 0.16257313}
     m_Extent: {x: 1.0470597, y: 0.80556375, z: 0.6280556}
   m_DirtyAABB: 0
+--- !u!64 &1113218149080817990
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5396506115159369242}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &5510904612270131645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2327,6 +2357,8 @@ GameObject:
   - component: {fileID: 4089161138117990701}
   - component: {fileID: 5587063416313996838}
   - component: {fileID: 7871233639731504702}
+  - component: {fileID: 7502002314945634186}
+  - component: {fileID: 7496765513913745520}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -2413,6 +2445,32 @@ MonoBehaviour:
   PathPoints: []
   minDistance: 10
   index: 0
+--- !u!65 &7502002314945634186
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7283554369043651053}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.51, y: 3.53, z: 1.49}
+  m_Center: {x: -0.1, y: 1.9, z: 0}
+--- !u!65 &7496765513913745520
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7283554369043651053}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.51, y: 3.53, z: 1.49}
+  m_Center: {x: -0.1, y: 1.9, z: 0}
 --- !u!1 &7408433853325818550
 GameObject:
   m_ObjectHideFlags: 0

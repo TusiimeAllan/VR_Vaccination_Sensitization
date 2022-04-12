@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class bringHalo : MonoBehaviour
 {
+    public GameObject Halo;
+    
     // Update is called once per frame
     void Update()
     {
@@ -12,9 +14,9 @@ public class bringHalo : MonoBehaviour
 
     void OnCollisionEnter(Collision collide)
     {    
-        if(collide.gameObject.name == "SingleCorona")        
+        if(collide.gameObject.tag == "Respawn")        
         {
-            Destroy(gameObject);
+            Halo.SetActive(true);
         }        
     }
 

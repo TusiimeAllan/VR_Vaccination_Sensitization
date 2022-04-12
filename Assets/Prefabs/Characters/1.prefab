@@ -906,6 +906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3159322329904022025}
   - component: {fileID: 7164902008345761986}
+  - component: {fileID: 3853532875825052041}
   m_Layer: 0
   m_Name: Ch07_Pants
   m_TagString: Untagged
@@ -992,6 +993,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.011904016, y: -0.37575653, z: 0.15202533}
     m_Extent: {x: 0.21345986, y: 0.48792574, z: 0.29045916}
   m_DirtyAABB: 0
+--- !u!64 &3853532875825052041
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3797956459222006021}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &3976066217281355209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,6 +1653,8 @@ GameObject:
   - component: {fileID: 1751665343090942321}
   - component: {fileID: 6372574520592082234}
   - component: {fileID: 6235500330420231940}
+  - component: {fileID: 6295240210695596782}
+  - component: {fileID: 2918933485208923821}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -1725,6 +1742,32 @@ MonoBehaviour:
   PathPoints: []
   minDistance: 9
   index: 0
+--- !u!65 &6295240210695596782
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5036385721930342833}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 1.78, z: 1.03}
+  m_Center: {x: 0, y: 1.06, z: 0}
+--- !u!65 &2918933485208923821
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5036385721930342833}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 1.78, z: 1.03}
+  m_Center: {x: 0, y: 1.06, z: 0}
 --- !u!1 &5386221386433849413
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,6 +2211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5787461232933975576}
   - component: {fileID: 8476906152179941582}
+  - component: {fileID: 9035527405778504423}
   m_Layer: 0
   m_Name: Ch07_Suit
   m_TagString: Untagged
@@ -2269,6 +2313,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.026984543, y: 0.21077129, z: 0.019543715}
     m_Extent: {x: 0.3816165, y: 0.3437014, z: 0.18478063}
   m_DirtyAABB: 0
+--- !u!64 &9035527405778504423
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7261319668925883261}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &7367114070945986331
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class destroyAfter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter(Collider other)
     {
-        use();
-    }
-
-    void use()
-    {
-        StartCoroutine(Kill());
+        if (other.gameObject.tag == "Respawn")
+        {
+            Destroy(other.gameObject);
+        }
     }
 
     IEnumerator Kill()

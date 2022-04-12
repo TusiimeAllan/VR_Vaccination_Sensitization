@@ -539,6 +539,8 @@ GameObject:
   - component: {fileID: 5078916046660485510}
   - component: {fileID: 6694411759653481927}
   - component: {fileID: 4652962153926440716}
+  - component: {fileID: 6654465803089463799}
+  - component: {fileID: 6568693294502224468}
   m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
@@ -625,6 +627,32 @@ MonoBehaviour:
   PathPoints: []
   minDistance: 10
   index: 0
+--- !u!65 &6654465803089463799
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004123017679421766}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.89, y: 2, z: 0.84}
+  m_Center: {x: -0.1, y: 1.19, z: 0}
+--- !u!65 &6568693294502224468
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004123017679421766}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.89, y: 2, z: 0.84}
+  m_Center: {x: -0.1, y: 1.19, z: 0}
 --- !u!1 &2031878237525400859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,6 +1568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7029405789786129291}
   - component: {fileID: 3810351886826413900}
+  - component: {fileID: 5663168217088158990}
   m_Layer: 0
   m_Name: Ch28_Pants
   m_TagString: Untagged
@@ -1625,6 +1654,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.022225514, y: -0.391387, z: 0.07084899}
     m_Extent: {x: 0.22143824, y: 0.4461978, z: 0.30267322}
   m_DirtyAABB: 0
+--- !u!64 &5663168217088158990
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5958226100617873900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &6065747141514310434
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,6 +2240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4298446181187783700}
   - component: {fileID: 4465274883423503224}
+  - component: {fileID: 941791350537374057}
   m_Layer: 0
   m_Name: Ch28_Hoody
   m_TagString: Untagged
@@ -2298,6 +2342,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0037818998, y: 0.2881667, z: 0.028323546}
     m_Extent: {x: 0.5030496, y: 0.3700453, z: 0.20087288}
   m_DirtyAABB: 0
+--- !u!64 &941791350537374057
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8015688780763334845}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &8026381926966274521
 GameObject:
   m_ObjectHideFlags: 0

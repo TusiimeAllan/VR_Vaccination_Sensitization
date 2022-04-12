@@ -126,6 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5345879057997783779}
   - component: {fileID: 8262422799514587418}
+  - component: {fileID: 37894919644086556}
   m_Layer: 0
   m_Name: Bottoms
   m_TagString: Untagged
@@ -212,6 +213,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.07275337, y: -0.73414314, z: 0.27428913}
     m_Extent: {x: 0.57404643, y: 0.9853368, z: 0.75066733}
   m_DirtyAABB: 0
+--- !u!64 &37894919644086556
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378040937150160465}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &722440954790306034
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5382575035555898857}
   - component: {fileID: 2255925156146916368}
+  - component: {fileID: 1593705292638576464}
   m_Layer: 0
   m_Name: Shoes
   m_TagString: Untagged
@@ -304,6 +320,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.16368757, y: -1.5013294, z: -0.17487183}
     m_Extent: {x: 0.32245094, y: 0.3896122, z: 0.47741887}
   m_DirtyAABB: 0
+--- !u!64 &1593705292638576464
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722440954790306034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &792789480863158374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,6 +1681,8 @@ GameObject:
   - component: {fileID: 652662772750240512}
   - component: {fileID: 6200754471622271514}
   - component: {fileID: 8175631284601003117}
+  - component: {fileID: 4610930515065931271}
+  - component: {fileID: 4833961586427303126}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -1738,6 +1770,32 @@ MonoBehaviour:
   PathPoints: []
   minDistance: 10
   index: 0
+--- !u!65 &4610930515065931271
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099357331666750400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.95, y: 3.68, z: 1.77}
+  m_Center: {x: 0, y: 1.96, z: 0}
+--- !u!65 &4833961586427303126
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099357331666750400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.95, y: 3.68, z: 1.77}
+  m_Center: {x: 0, y: 1.96, z: 0}
 --- !u!1 &6199840426914930660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,6 +2611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4006110257702477179}
   - component: {fileID: 7015575524550011307}
+  - component: {fileID: 8342163812637067744}
   m_Layer: 0
   m_Name: Tops
   m_TagString: Untagged
@@ -2656,6 +2715,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0025931299, y: 0.3326422, z: 0.078388214}
     m_Extent: {x: 0.92253983, y: 0.7715987, z: 0.65163374}
   m_DirtyAABB: 0
+--- !u!64 &8342163812637067744
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8887038641091687479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &8901260959237340527
 GameObject:
   m_ObjectHideFlags: 0

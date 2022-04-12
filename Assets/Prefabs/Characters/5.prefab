@@ -107,6 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5245510289112689080}
   - component: {fileID: 2165966549241437544}
+  - component: {fileID: 3496757555087488949}
   m_Layer: 0
   m_Name: Tops
   m_TagString: Untagged
@@ -208,6 +209,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.010951996, y: 0.44628242, z: 0.16259357}
     m_Extent: {x: 1.127259, y: 0.76506615, z: 0.68169415}
   m_DirtyAABB: 0
+--- !u!64 &3496757555087488949
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289991054141210868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &348178444270733740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1072,8 @@ GameObject:
   - component: {fileID: 8529222344239366083}
   - component: {fileID: 7481176528039860932}
   - component: {fileID: 7441099860731074507}
+  - component: {fileID: 7507614315602104582}
+  - component: {fileID: 7725292598497986389}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -1143,6 +1160,32 @@ MonoBehaviour:
   PathPoints: []
   minDistance: 10
   index: 0
+--- !u!65 &7507614315602104582
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167753405543988995}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.51, y: 3.53, z: 1.49}
+  m_Center: {x: -0.1, y: 1.9, z: 0}
+--- !u!65 &7725292598497986389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167753405543988995}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.51, y: 3.53, z: 1.49}
+  m_Center: {x: -0.1, y: 1.9, z: 0}
 --- !u!1 &3451617804615018042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,6 +2628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3846983862307001888}
   - component: {fileID: 1006939482092971481}
+  - component: {fileID: 5401900560029172663}
   m_Layer: 0
   m_Name: Bottoms
   m_TagString: Untagged
@@ -2671,6 +2715,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.12795067, y: -0.8656184, z: 0.3750203}
     m_Extent: {x: 0.64836776, y: 1.1835421, z: 0.7995608}
   m_DirtyAABB: 0
+--- !u!64 &5401900560029172663
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8821507028883368594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &8886464666343567812
 GameObject:
   m_ObjectHideFlags: 0
