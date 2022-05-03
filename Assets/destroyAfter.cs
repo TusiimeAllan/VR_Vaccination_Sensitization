@@ -12,9 +12,4 @@ public class destroyAfter : MonoBehaviour
         }
     }
 
-    IEnumerator Kill()
-    {
-        yield return new WaitForSeconds(9f);
-        Destroy(gameObject);
-    }
 }

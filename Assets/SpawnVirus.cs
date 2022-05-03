@@ -14,14 +14,14 @@ public class SpawnVirus : MonoBehaviour
 
     void Start()
     {
-        spawn = true;
+        WaitAbit();
     }
 
     void Update()
     {
         if(spawn == true){
             produce();
-            WaitAbit();
+            SwitchOff();
         }else{
             switchOn();
         }
@@ -29,12 +29,17 @@ public class SpawnVirus : MonoBehaviour
 
     void WaitAbit()
     {
-        StartCoroutine(PutOff());
+        StartCoroutine(Wait());
     }
 
-    IEnumerator PutOff()
+    IEnumerator Wait()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
+        spawn = true;
+    }
+
+    void SwitchOff()
+    {
         spawn = false;
     }
 

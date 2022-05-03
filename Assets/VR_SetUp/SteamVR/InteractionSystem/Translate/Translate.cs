@@ -40,7 +40,7 @@ namespace Valve.VR.InteractionSystem
         [Header( "Camera" )]
         public Transform cameraTransform;
         public Vector3 moveDirection;
-        public float moveSpeed = 0.05f;
+        public float moveSpeed = 2.0f;
 
         void Start()
         {
