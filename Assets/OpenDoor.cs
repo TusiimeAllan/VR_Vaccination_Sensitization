@@ -5,14 +5,37 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
     [SerializeField]
-    private GameObject Door;
+    private Animator Door;
 
     [SerializeField]
-    private string Animation;
+    private AudioSource audioSource; 
+
+    [SerializeField]
+    private Animator NurseController;
+
+    void Start() {
+
+        NurseController.SetBool("Talk", false);
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) {
-        GetComponent<Animator>().SetTrigger("OpenDoor");
+        Door.SetBool("OpenDoor", true);
+        }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player")) {
+        Door.SetBool("OpenDoor", false);
+        NurseController.SetBool("Talk", true);
+        PlayNurseVoice();
+        }
+    }
+
+    void PlayNurseVoice()
+    {
+        audioSource.Play();
     }
 }
