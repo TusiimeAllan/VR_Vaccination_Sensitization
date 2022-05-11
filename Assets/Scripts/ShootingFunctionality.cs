@@ -29,6 +29,7 @@ public class ShootingFunctionality : MonoBehaviour
 
     void Shoot()
     {
+        Time.timeScale = 1;
         RaycastHit hit;
         Quaternion fireRotation = Quaternion.LookRotation(transform.forward);
         float currentSpread = Mathf.Lerp(0.0f, maxSpreadAngle, accuracy / timeTillMaxSpread);

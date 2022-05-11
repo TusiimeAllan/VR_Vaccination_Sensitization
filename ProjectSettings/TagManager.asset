@@ -8,6 +8,8 @@ TagManager:
   - projectile
   - FxTemporaire
   - Virus
+  - Cells
+  - Bullet
   layers:
   - Default
   - TransparentFX
