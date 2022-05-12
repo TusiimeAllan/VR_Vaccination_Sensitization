@@ -35,8 +35,15 @@ public class SceneTransition : MonoBehaviour
         Debug.Log("Next Level Loaded");
         Debug.Log("Previous Level Removed");
 
-        yield return new WaitForSeconds(2f);
-        SceneManager.UnloadSceneAsync(previousLevel);
+        yield return new WaitForSeconds(1f);
+        var Unloading = SceneManager.UnloadSceneAsync(previousLevel);
+
+        while(!Unloading.isDone)
+        {
+            yield return null;
+        }
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     } 
 }
 }

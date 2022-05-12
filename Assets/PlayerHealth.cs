@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             deadScreen.SetActive(true);
-            Time.timeScale = 0;
+            // Time.timeScale = 0;
         }else{
             deadScreen.SetActive(false);
             lifeScreen.SetActive(true);
@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
     public void Rejuvenate()
     {
         currentHealth = 100;
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
     }
 
     public void AcceptDefeat()

@@ -273,6 +273,8 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		private IEnumerator Start()
 		{
+			Time.timeScale = 1;
+			
 			_instance = this;
 
             while (SteamVR.initializedState == SteamVR.InitializedStates.None || SteamVR.initializedState == SteamVR.InitializedStates.Initializing)
