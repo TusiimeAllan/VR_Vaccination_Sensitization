@@ -10,54 +10,48 @@ public class SpawnVirus : MonoBehaviour
     public bool spawn = false;
 
     public int NumberOfObjectsToSpawn;
-    private int counter = 10;
+    private int counter;
 
     void Start()
     {
-        WaitAbit();
+        makeNumber();
+        produce();
+    }
+
+    void makeNumber()
+    {
+        counter = NumberOfObjectsToSpawn;
     }
 
     void Update()
     {
-        if(spawn == true){
-            produce();
-            SwitchOff();
-        }else{
-            switchOn();
-        }
-    }
-
-    void WaitAbit()
-    {
-        StartCoroutine(Wait());
-    }
-
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(1f);
-        spawn = true;
-    }
-
-    void SwitchOff()
-    {
-        spawn = false;
+       if(counter <= 0)
+       {
+           switchOn();
+       }else{
+           produce();
+       }
     }
 
     void switchOn()
     {
+        
         StartCoroutine(PutOn());
     }
 
     IEnumerator PutOn()
     {
         yield return new WaitForSeconds(5f);
-        spawn = true;
+        makeNumber();
     }
 
     public void produce()
     {
-        GameObject Virus = Instantiate(virus[Random.Range(0, virus.Length)], this.transform) as GameObject;
-        Virus.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position;
-        counter++;
+        while(counter > 0)
+        {
+            GameObject Virus = Instantiate(virus[Random.Range(0, virus.Length)], this.transform) as GameObject;
+            Virus.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position;
+            counter--;
+        }
     }
 }
