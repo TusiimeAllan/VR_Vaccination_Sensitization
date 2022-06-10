@@ -8,13 +8,13 @@ public class PlayerHealth : MonoBehaviour
 {
     public int currentHealth;
     public TextMeshProUGUI LifeUI;
-    public GameObject deadScreen;
+    public GameObject deathScreen;
     public GameObject lifeScreen;
 
     void Start()
     {
         currentHealth = 100;
-        deadScreen.SetActive(false);
+        deathScreen.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -31,14 +31,14 @@ public class PlayerHealth : MonoBehaviour
 
         if(currentHealth <= 0)
         {
-            deadScreen.SetActive(true);
+            deathScreen.SetActive(true);
             // Time.timeScale = 0;
         }else{
-            deadScreen.SetActive(false);
+            deathScreen.SetActive(false);
             lifeScreen.SetActive(true);
         }
 
-        if(deadScreen.active == true)
+        if(deathScreen.active == true)
         {
             lifeScreen.SetActive(false);
         }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.IO;
+using TMPro;
 
 namespace Valve.VR.InteractionSystem
 {
@@ -14,6 +14,14 @@ public class ShootingFunctionality : MonoBehaviour
     public float timeTillMaxSpread;
     public GameObject bullet;
     public GameObject shootPoint;
+    public int NumberOfBullets;
+    public TextMeshProUGUI bulletNumber;
+    public GameObject DeathScreen;
+
+    void Start() {
+        //Setting the Number of Bullets on the UI
+        bulletNumber.text = NumberOfBullets.ToString();
+    }
 
     // Update is called once per frame
     void Update()
@@ -23,13 +31,19 @@ public class ShootingFunctionality : MonoBehaviour
 
         if(Input.GetButton("Fire1") || rightHandPressed)
         {
-            Shoot();
+            if(NumberOfBullets > 0)
+            {
+                Shoot();
+            }else{
+                DeathScreen.SetActive(true);
+            }
+            
+            bulletNumber.text = NumberOfBullets.ToString();
         }
     }
 
     void Shoot()
     {
-        Time.timeScale = 1;
         RaycastHit hit;
         Quaternion fireRotation = Quaternion.LookRotation(transform.forward);
         float currentSpread = Mathf.Lerp(0.0f, maxSpreadAngle, accuracy / timeTillMaxSpread);
@@ -40,6 +54,9 @@ public class ShootingFunctionality : MonoBehaviour
             GameObject tempBullet = Instantiate(bullet, shootPoint.transform.position, shootPoint.transform.rotation);
             tempBullet.GetComponent<MoveBullet>().hitPoint = hit.point;
         }
+
+        //Reduce the Number of Bullets
+        NumberOfBullets--;
     }
 }
 }
