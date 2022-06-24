@@ -32811,7 +32811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5334d7ee0c5df4ca1266a040941218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: Inside_Scene
+  levelName: Inside_Scene_1
   previousLevel: Kampala_Street
   hoverButton: {fileID: 6823509946141307765}
 --- !u!4 &1166204469959011359

@@ -496,7 +496,7 @@ namespace UnityEngine.XR.Interaction.Toolkit
                 m_Controller.hideControllerModel = true;
 
             if (m_PlayHapticsOnSelectEntered && m_Controller != null)
-                SendHapticImpulse(m_HapticSelectEnterIntensity, m_HapticSelectEnterDuration);
+                // SendHapticImpulse(m_HapticSelectEnterIntensity, m_HapticSelectEnterDuration);
 
             if (m_PlayAudioClipOnSelectEntered && m_AudioClipForOnSelectEntered != null)
             {
@@ -520,7 +520,7 @@ namespace UnityEngine.XR.Interaction.Toolkit
                 m_Controller.hideControllerModel = false;
 
             if (m_PlayHapticsOnSelectExited && m_Controller != null)
-                SendHapticImpulse(m_HapticSelectExitIntensity, m_HapticSelectExitDuration);
+                // SendHapticImpulse(m_HapticSelectExitIntensity, m_HapticSelectExitDuration);
 
             if (m_PlayAudioClipOnSelectExited && m_AudioClipForOnSelectExited != null)
             {
@@ -535,7 +535,7 @@ namespace UnityEngine.XR.Interaction.Toolkit
         {
             base.OnHoverEntering(interactable);
             if (m_PlayHapticsOnHoverEntered && m_Controller != null)
-                SendHapticImpulse(m_HapticHoverEnterIntensity, m_HapticHoverEnterDuration);
+                // SendHapticImpulse(m_HapticHoverEnterIntensity, m_HapticHoverEnterDuration);
 
             if (m_PlayAudioClipOnHoverEntered && m_AudioClipForOnHoverEntered != null)
             {
@@ -551,7 +551,7 @@ namespace UnityEngine.XR.Interaction.Toolkit
         {
             base.OnHoverExiting(interactable);
             if (m_PlayHapticsOnHoverExited && m_Controller != null)
-                SendHapticImpulse(m_HapticHoverExitIntensity, m_HapticHoverExitDuration);
+                // SendHapticImpulse(m_HapticHoverExitIntensity, m_HapticHoverExitDuration);
 
             if (m_PlayAudioClipOnHoverExited && m_AudioClipForOnHoverExited != null)
             {
