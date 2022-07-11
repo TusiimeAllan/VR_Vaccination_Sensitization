@@ -18,11 +18,6 @@ public class ShootingFunctionality : MonoBehaviour
     public TextMeshProUGUI bulletNumber;
     public GameObject DeathScreen;
 
-    void Start() {
-        //Setting the Number of Bullets on the UI
-        bulletNumber.text = NumberOfBullets.ToString();
-    }
-
     // Update is called once per frame
     void Update()
     {

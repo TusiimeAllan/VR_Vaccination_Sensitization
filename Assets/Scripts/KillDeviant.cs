@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class KillDeviant : MonoBehaviour
 {
-    public string deviantName;
-    public GameObject Deviant;
+    [SerializeField]
+    private string deviantName;
+    private GameObject Deviant;
 
     void Update()
     {
