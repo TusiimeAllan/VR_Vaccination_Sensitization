@@ -20,7 +20,8 @@ public class SceneTransition : MonoBehaviour
 
     private void OnButtonDown(Hand hand)
     {
-        StartCoroutine(LoadLevelAsync());
+        // StartCoroutine(LoadLevelAsync());
+        GoTo();
     }
 
     private IEnumerator LoadLevelAsync()
@@ -44,6 +45,11 @@ public class SceneTransition : MonoBehaviour
         }
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void GoTo()
+    {
+        SceneManager.LoadScene(levelName);
     } 
 }
 }

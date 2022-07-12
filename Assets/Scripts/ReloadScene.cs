@@ -5,22 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class ReloadScene : MonoBehaviour
 {
-    public float delay = 3;
+    public float delay = 2f;
     public string sceneName;
+    public float check = 0.0f;
      void Start()
      {
-         LoadMe();
+        check = PlayerPrefs.GetFloat("check");
+        LoadMe(check);
      }
 
-     void LoadMe()
+     void LoadMe(float checker)
      {
-        StartCoroutine(LoadLevelAfterDelay(delay));
+        if(checker != 1)
+        {
+            StartCoroutine(LoadLevelAfterDelay(delay));
+        }
+        
      }
  
      IEnumerator LoadLevelAfterDelay(float delay)
      {
          yield return new WaitForSeconds(delay);
+         PlayerPrefs.SetFloat("check", 1f);
          SceneManager.LoadScene(sceneName);
-         Destroy(gameObject);
+         
      }
 }

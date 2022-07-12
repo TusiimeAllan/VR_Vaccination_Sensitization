@@ -841,7 +841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -132.51, y: -62.04}
+  m_AnchoredPosition: {x: -132.50977, y: -62.04004}
   m_SizeDelta: {x: 137.87842, y: 74.090744}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &333469106
@@ -2055,6 +2055,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 3
+  sceneName: Inside_Scene_1
+  check: 0
 --- !u!4 &777554533
 Transform:
   m_ObjectHideFlags: 0
@@ -2150,6 +2152,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Riffle Gun 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216358667419504390, guid: 77f37c608ca193142873663ab915c165,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5449373164710336657, guid: 77f37c608ca193142873663ab915c165,
         type: 3}
@@ -9320,7 +9327,8 @@ MonoBehaviour:
   noSteamVRFallbackCamera: {fileID: 0}
   noSteamVRFallbackMaxDistanceNoItem: 10
   noSteamVRFallbackMaxDistanceWithItem: 0.5
-  renderModelPrefab: {fileID: 0}
+  renderModelPrefab: {fileID: 1000012617731570, guid: 837f93beb9a614743ae3a2c0ada7c388,
+    type: 3}
   renderModels: []
   mainRenderModel: {fileID: 0}
   hoverhighlightRenderModel: {fileID: 0}
@@ -10203,7 +10211,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deviantName: Kampala_Player
-  Deviant: {fileID: 0}
 --- !u!1 &5407984098012489550
 GameObject:
   m_ObjectHideFlags: 0
