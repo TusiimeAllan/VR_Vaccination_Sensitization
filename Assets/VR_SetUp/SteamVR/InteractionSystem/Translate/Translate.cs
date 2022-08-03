@@ -31,6 +31,10 @@ namespace Valve.VR.InteractionSystem
 
         private CharacterController m_CharacterController = null;
 
+        [SerializeField]
+        private Rigidbody rb;
+
+        [Space]
         [Header( "Our Requirements" )]
 		private Hand pointerHand = null;
 		private Player player = null;
@@ -53,10 +57,12 @@ namespace Valve.VR.InteractionSystem
 				Destroy( this.gameObject );
 				return;
 			}
+
+            rb = GetComponent<Rigidbody>();
 		}
 
 
-        void Update()
+        void FixedUpdate()
 		{
 
             bool rightHandValid = player.rightHand.currentAttachedObject == null ||
@@ -72,7 +78,7 @@ namespace Valve.VR.InteractionSystem
             bool leftHandReleased = TranslatePlayer.GetStateUp(SteamVR_Input_Sources.LeftHand) && leftHandValid;
 
             Vector3 lookDirection = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z);
-            moveDirection = lookDirection * moveSpeed;
+            moveDirection = lookDirection * moveSpeed * Time.deltaTime;
 
             bool gunOn = grabGripAction.GetStateDown(SteamVR_Input_Sources.RightHand);
 
@@ -111,14 +117,23 @@ namespace Valve.VR.InteractionSystem
                 }
 		}
 
+        void OnTriggerEnter(Collider other)
+        {
+            if(other.gameObject.tag == "Obstacle"){
+                ReversePlayer();
+            }            
+        }
+
         private void MovePlayer()
         {
-            transform.localPosition += moveDirection;
+            rb.MovePosition(transform.position + moveDirection);
+            // transform.localPosition += moveDirection;
         }
 
         private void ReversePlayer()
         {
-            transform.localPosition -= moveDirection;
+            rb.MovePosition(transform.position - moveDirection);
+            // transform.localPosition -= moveDirection;
         }
         
     }

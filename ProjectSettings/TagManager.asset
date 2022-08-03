@@ -11,6 +11,7 @@ TagManager:
   - Cells
   - Bullet
   - Target
+  - Obstacle
   layers:
   - Default
   - TransparentFX
