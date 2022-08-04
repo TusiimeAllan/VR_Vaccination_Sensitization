@@ -22,7 +22,7 @@ namespace Valve.VR.InteractionSystem
 
         public SteamVR_Action_Boolean m_MovePress = null;
         public SteamVR_Action_Vector2 m_MoveValue = null;
-        public float move = 1;
+        public float move = 3;
 
         public SteamVR_Input_Sources handType;
         public SteamVR_Action_Boolean grabGripAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("GrabGrip");
