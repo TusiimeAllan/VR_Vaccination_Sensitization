@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1854701300201949549}
   - component: {fileID: 4860974556817183324}
   - component: {fileID: 1591023899194991358}
-  - component: {fileID: 1039750697247952093}
   m_Layer: 0
   m_Name: RBC
   m_TagString: Cells
@@ -128,17 +127,3 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.1957154
   m_Center: {x: 0.01591339, y: -0.016948164, z: 0.0024380833}
---- !u!64 &1039750697247952093
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5077326981347169732}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2832280311799026054, guid: 37cb7f9f2fb848441bfd6adbac18b336, type: 3}

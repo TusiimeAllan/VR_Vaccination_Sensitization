@@ -7,12 +7,17 @@ public class BounceBackMechanics : MonoBehaviour
     [SerializeField] private string playerTag;
     [SerializeField] private float bounceForce;
 
-    private void OnCollisionEnter(Collision collision) {
-        if(collision.transform.tag == playerTag){
-            Rigidbody otherRB = collision.rigidbody;
-            //otherRB.AddForce(collision.contacts[0].normal * bounceForce);
+    // void Start()
+    // {
+    //     bounceForce = 0;
+    // }
 
-            otherRB.AddExplosionForce(bounceForce, collision.contacts[0].point, 5);
-        }
-    }
+    // private void OnCollisionEnter(Collision collision) {
+    //     if(collision.transform.tag == playerTag){
+    //         Rigidbody otherRB = collision.rigidbody;
+    //         //otherRB.AddForce(collision.contacts[0].normal * bounceForce);
+
+    //         otherRB.AddExplosionForce(bounceForce, collision.contacts[0].point, 5);
+    //     }
+    // }
 }

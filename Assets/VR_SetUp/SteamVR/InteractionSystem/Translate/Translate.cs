@@ -20,9 +20,8 @@ namespace Valve.VR.InteractionSystem
         public float m_Sensitivity = 0.1f;
         public float m_MaxSpeed = 1.0f;
 
-        public SteamVR_Action_Boolean m_MovePress = null;
-        public SteamVR_Action_Vector2 m_MoveValue = null;
-        public float move = 3;
+        // public SteamVR_Action_Boolean m_MovePress = null;
+        // public SteamVR_Action_Vector2 m_MoveValue = null;
 
         public SteamVR_Input_Sources handType;
         public SteamVR_Action_Boolean grabGripAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("GrabGrip");
