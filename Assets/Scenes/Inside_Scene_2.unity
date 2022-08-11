@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba84888c9d4c504cb752a3904551a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagFilter: Virus
+  tagFilter: Cells
 --- !u!65 &330422902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2003,7 +2003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba84888c9d4c504cb752a3904551a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagFilter: Virus
+  tagFilter: Cells
 --- !u!1 &1248996031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,7 +2217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba84888c9d4c504cb752a3904551a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagFilter: Virus
+  tagFilter: Cells
 --- !u!1 &1306683955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,7 +2489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba84888c9d4c504cb752a3904551a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagFilter: Virus
+  tagFilter: Cells
 --- !u!65 &1324641943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2596,7 +2596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba84888c9d4c504cb752a3904551a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagFilter: Virus
+  tagFilter: Cells
 --- !u!65 &1329520001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2907,6 +2907,7 @@ MonoBehaviour:
   ViralLoad: 10
   spawnDelay: 3
   Logic: {fileID: 1812892467}
+  VirusCount: 0
 --- !u!4 &1444925297
 Transform:
   m_ObjectHideFlags: 0
@@ -3938,7 +3939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba84888c9d4c504cb752a3904551a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagFilter: Virus
+  tagFilter: Cells
 --- !u!65 &2116235917
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class Virus_Spawner : MonoBehaviour
     public VirusWar Logic;
     private int Level;
 
-    private int counter = 10;
+    public int VirusCount = 0;
 
     void Start() 
     {
@@ -175,5 +175,6 @@ public class Virus_Spawner : MonoBehaviour
     {
         spawnedEnemy = Instantiate(ObjectsToSpawn[Random.Range(0, ObjectsToSpawn.Length)]);
         spawnedEnemy.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position;
+        VirusCount++;
     }
 }
