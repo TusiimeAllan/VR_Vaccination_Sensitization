@@ -7,14 +7,17 @@ public class VirusWar : MonoBehaviour
     [Header("External Scripts")]
     public Virus_Spawner SpawnLogic;
     public PlayerHealth playerHealth;
-    public int WaveLevel; 
+    public int WaveLevel = 0; 
 
     public bool spawn = false;
 
+    private int ViralLoad;
+
     void Start()
     {
+        ViralLoad = 0;
+
         CalculateLevel();
-        spawn = true;
     }
 
     public void Testing()
@@ -24,11 +27,26 @@ public class VirusWar : MonoBehaviour
 
     private void CalculateLevel()
     {
-        WaveLevel = 1;
+        if(WaveLevel == 0){
+            Spawn();
+        }else if(ViralLoad < 2) {
+            Spawn();
+        }
+    }
+
+    void Update()
+    {
+        ViralLoad = GameObject.FindGameObjectsWithTag("Virus").Length;
     }
 
     void LateUpdate()
     {
-        Debug.Log("Number: " + SpawnLogic.VirusCount);
+        Debug.Log("Number of Viruses: " + ViralLoad );
+    }
+
+    void Spawn()
+    {
+        WaveLevel++;
+        spawn = true;
     }
 }
